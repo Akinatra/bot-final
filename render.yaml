@@ -1,0 +1,8 @@
+
+services:
+  - type: worker
+    name: whois-bot-background
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python whois_bot_worker_safe.py"
